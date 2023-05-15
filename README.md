@@ -1,4 +1,4 @@
-Here is the explaining of the all the components which are made to complete the given task and also a hosted link for the application is added at the bottom of the page.
+Here is the detailed explaination of all the components which are made to complete the given task and also a hosted link for the application is added at the bottom of the page.
 
 According to the task provided, on first load, there should be submit button
 
