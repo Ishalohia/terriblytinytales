@@ -78,4 +78,66 @@ In line:77-82 This block of code is rendering a text element that displays the w
 
 In line:89  This line exports the 'Histogram' component as the default export which means that it can be imported and used in other parts of the codebase.
 
+Now,for building an "Export" button, which when clicked will download a CSV file of the histogram data. 
 
+<img width="969" alt="Screenshot 2023-05-15 at 9 26 41 PM" src="https://github.com/Ishalohia/terriblytinytales/assets/104261885/962623a4-c9ab-42e3-b3d3-a10bc65c4fd5">
+
+In line:1 This line imports the "React" library, which is necessary for creating React components.
+
+In line:2 This line imports the "CSVLink" component from the "react-csv" library, which provides a way to create a link that downloads CSV data.
+
+In line:3 This line imports a CSS module named ExportButton.module.css, which contains styles that will be applied to the ExportButton component.
+
+In line:5 This line defines a new React component called "ExportButton". It takes in a single parameter, 'props', which contains any properties that were passed in when the component was used.
+
+In line:6-11 This set of code returns a CSVLink component, which is provided by the react-csv library. This component takes three props: 'className' which sets the CSS class of the link which are defined in the CSS module imported earlier. 'data' which is the data that will be exported as a CSV file. It is taken from the 'data' prop that was passed in when the "ExportButton" component was used. 'filename' which is the name of the exported file. It is taken from the filename prop that was also passed in when the "ExportButton" component was used.
+
+In line:13 This line exports the "ExportButton" component as the default export of the module, which means that it can be imported and used in other files.
+
+Now, In app.js file we are importing our all the component where we fetches text data from a URL, processes it, and generates a histogram of the top 20 most frequently occurring words.
+
+<img width="777" alt="Screenshot 2023-05-15 at 9 32 45 PM" src="https://github.com/Ishalohia/terriblytinytales/assets/104261885/7bc386f9-7a1b-4e0f-8dc5-4076d2fbba0c">
+
+in line:1-6 These lines is importing the React module along with the useState hook from the React library. The d3 module is also imported, which is a JavaScript library that provides various functions for data visualization. Also, the components are imported from their respective files. The "styles" object is imported from a CSS file (App.module.css) which contains CSS styles for the App component. 
+
+In line:8 This line consist a function component named App that represents the main component of a React application. The "App" function doesn't take any arguments.
+
+In line:9-10 These lines uses "useState" hooks to manage state: useState to manage the data and loading state, and setIsLoading and setData to update the state.
+
+In line:11 Creating a function "handleSubmit" which is called when the user submits a request to fetch data from a text file hosted at provided link
+
+In line:12 This line sets the isLoading state to true, indicating that data is being fetched
+
+In line:13 This line fetch the text file from the specified URL
+
+In line:14 Parse the response as text
+
+In line:15-20 This set of code once have the retrived text, then it is split into an array of words using a regular expression. The array of words is then counted using the reduce() function to create a Map object where the keys are words and the values are their counts.
+
+In line: 22 This line creates a new array from the 'words' Map object, mapping each key-value pair to an object with properties 'word' and 'count'
+
+In line:23 This line sorts the array in descending order based on the 'count' property of each object.
+
+In line:24 This line extracts the first 20 objects from the sorted array.
+
+In line:25 This line sets the extracted "data" as the state of the component.
+
+In line:26 This line sets the "isLoading" state variable to "false" after the data has been processed and set as the state.
+
+In line:29-31 These lines execute in case of an "error", the error is logged to the console and the "isLoading" variable is also set to "false".
+
+<img width="673" alt="Screenshot 2023-05-15 at 9 51 14 PM" src="https://github.com/Ishalohia/terriblytinytales/assets/104261885/0b51320d-d20a-4dba-91d6-609671718f44">
+
+In line:36 This line creates a <div> element with a class name of "app", which is defined in the "App.module.css" stylesheet.
+
+In line:37 This line creates another <div> element with a class name of "controls".
+  
+In line:38 This line renders a "SubmitButton" component with an "onSubmit" prop set to the "handleSubmit" function defined earlier. This button is used to trigger the data fetching and processing logic.
+  
+In line:39-44 These lines contains a conditional statement that checks if the data state contains any data. If it does, it renders an ExportButton component with two props: data and filename. 
+ 
+In line:46-47 These lines has another conditional statement that checks if the isLoading state is true. If it is, it renders a loading message.
+  
+In line:48-63 These lines states if "isLoading" is 'false' and data has any length, it renders a "Histogram" component with various props for the size and layout of the histogram, as well as the scales for the 'x' and 'y' axis. If neither of the previous conditions are met, it renders 'null' (i.e., nothing).
+  
+In line:68 Exporting the app component.
