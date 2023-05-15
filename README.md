@@ -1,7 +1,9 @@
 vercel hosting link:- https://terriblytinytales-isha.vercel.app/
 
 According to the task provided, on first load, there should be submit button
+
 <img width="941" alt="Screenshot 2023-05-15 at 7 29 59 PM" src="https://github.com/Ishalohia/terriblytinytales/assets/104261885/86ba111f-15e8-4edb-a9b9-0585730062ce">
+
 This component is for the submitButton.
 In line:1, This line imports the React library which is needed to define React components.
 In line:2, This line imports the CSS styles from a local CSS module file called 'SubmitButton.module.css'. The 'styles' object will contain all the class names defined in that CSS file. 
@@ -11,7 +13,9 @@ In line:5-13, These line contains JSX code that will be rendered when the compon
 In line:14, This line exports the 'SubmitButton' component as the default export of this module, which means that it can be imported and used in other parts of the codebase.
 
 After this for creating the Histogram by fetching the data from the provided link that will parse the content and find the 20 most occurring words and plot a Histrogram for it.
+
 <img width="683" alt="Screenshot 2023-05-15 at 7 47 28 PM" src="https://github.com/Ishalohia/terriblytinytales/assets/104261885/14d93175-3aa7-473d-95bd-600e53606232">
+
 This component is for Histogram
 In line:1&3 These lines import React and a CSS module file called 'Histogram.module.css.
 In line:2 This line of code imports all of the functions and modules from the D3.js (Data-Driven Documents) library and binds them to the object named 'd3'. D3 is a popular JavaScript library used for data visualization and manipulation.
@@ -30,7 +34,9 @@ In line:32 This line has  "xAxis" which is a D3 axis generator function that is 
 In line:33 This line has "yAxis" which is a D3 axis generator function that is configured to display the 'y' scale as a left axis. Here, the "tickFormat" method is used to format the tick labels as integers.
 In line:35-37 This function is triggered when the mouse enters a bar of the histogram. It takes in the data associated with that bar and sets it as the currently hovered data in the state using the setHoveredData function.
 In line:39-41 This function is triggered when the mouse leaves a bar of the histogram. It sets the currently hovered data to null, effectively removing any displayed hover text.
+
 <img width="538" alt="Screenshot 2023-05-15 at 8 51 11 PM" src="https://github.com/Ishalohia/terriblytinytales/assets/104261885/4ececc56-c238-4615-96d5-6c9503fc6ad1">
+
 This code is the JSX code that renders the bar chart using D3 and React.
 In line:44 This line creates a container div for the entire histogram. This attaches the "containerRef" object created using the "useRef" hook to the div element. This allows us to access the DOM node that this div represents. The "styles.container" sets the CSS class name of the div element to 'container' which is defined in a CSS module. 
 In line:45 This line creates an SVG element that will contain the histogram visualization. The width of the SVG is set to the current width of the container, which is stored in the width state variable. The height is fixed at 600 pixels.
