@@ -128,9 +128,9 @@ In line:29-31 These lines execute in case of an "error", the error is logged to 
 
 <img width="673" alt="Screenshot 2023-05-15 at 9 51 14 PM" src="https://github.com/Ishalohia/terriblytinytales/assets/104261885/0b51320d-d20a-4dba-91d6-609671718f44">
 
-In line:36 This line creates a <div> element with a class name of "app", which is defined in the "App.module.css" stylesheet.
+In line:36 This line creates a "div" element with a class name of "app", which is defined in the "App.module.css" stylesheet.
 
-In line:37 This line creates another <div> element with a class name of "controls".
+In line:37 This line creates another "div" element with a class name of "controls".
   
 In line:38 This line renders a "SubmitButton" component with an "onSubmit" prop set to the "handleSubmit" function defined earlier. This button is used to trigger the data fetching and processing logic.
   
@@ -141,3 +141,5 @@ In line:46-47 These lines has another conditional statement that checks if the i
 In line:48-63 These lines states if "isLoading" is 'false' and data has any length, it renders a "Histogram" component with various props for the size and layout of the histogram, as well as the scales for the 'x' and 'y' axis. If neither of the previous conditions are met, it renders 'null' (i.e., nothing).
   
 In line:68 Exporting the app component.
+
+You can visit the vercel hosted link for checking the output of the code:  https://terriblytinytales-isha.vercel.app/
